@@ -5,6 +5,7 @@ import org.fungover.webapi.entities.Game;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.List;
 
 
@@ -12,6 +13,8 @@ import java.util.List;
 public interface GameRepository extends CrudRepository<Game, Long> {
 
 public List<Game> findAllByPlayerOneOrPlayerTwo(String playerOne,String playerTwo);
+
+
 
 
 }

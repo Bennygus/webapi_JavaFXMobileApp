@@ -11,24 +11,27 @@ public class Game {
     @GeneratedValue
     private Long gameId;
     private String message;
-    private String playerOne;
-    private String playerTwo;
+    private String playerOne ;
+    private String playerTwo ;
     private String result;
     private String choiceOne;
     private String choiceTwo;
+    private String state;
 
-    public Game(String message, String playerOne, String playerTwo, String result, String choiceOne,String choiceTwo) {
+    public Game(String message, String playerOne, String playerTwo, String result, String choiceOne,String choiceTwo,String state) {
         this.message = message;
         this.playerOne = playerOne;
         this.playerTwo = playerTwo;
         this.result = result;
         this.choiceOne = choiceOne;
         this.choiceTwo = choiceTwo;
+        this.state = state;
     }
 
     public Game() {
 
     }
+
 
     public Long getGameId() {
         return gameId;
@@ -70,8 +73,6 @@ public class Game {
         this.result = result;
     }
 
-
-
     public String getChoiceOne() {
         return choiceOne;
     }
@@ -86,5 +87,13 @@ public class Game {
 
     public void setChoiceTwo(String choiceTwo) {
         this.choiceTwo = choiceTwo;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

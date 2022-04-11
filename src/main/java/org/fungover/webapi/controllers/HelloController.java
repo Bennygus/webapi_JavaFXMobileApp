@@ -28,7 +28,7 @@ public class HelloController {
     // namnet behöver inte heta samma /greeting och metoden greeting
     public Text greeting(){
 
-        Text text = new Text("dasda");
+        Text text = new Text("Welcome");
 
 
         return text;
