@@ -39,9 +39,6 @@ public class GameController {
         //TODO Validate inRequest
         gameRepository.save(gameEntity);
 
-
-      //  List<Game> listGame = List.of(gameEntity);
-
         return ResponseEntity.ok((gameEntity));
     }
 
@@ -56,7 +53,8 @@ public class GameController {
 
         //TODO Validate inRequest
         game.setGameId(gameEntity.getGameId());
-        game.setMessage(gameEntity.getMessage());
+        game.setMessageOne(gameEntity.getMessageOne());
+        game.setMessageTwo(gameEntity.getMessageTwo());
         game.setPlayerOne(gameEntity.getPlayerOne());
         game.setPlayerTwo(gameEntity.getPlayerTwo());
         game.setResult(gameEntity.getResult());
@@ -65,7 +63,6 @@ public class GameController {
         game.setState(gameEntity.getState());
 
         final Game updateGame = gameRepository.save(game);
-
 
         return ResponseEntity.ok(updateGame);
     }
@@ -78,11 +75,11 @@ public class GameController {
 
     }
 
-    @GetMapping("/all")
-    public ResponseEntity<List<Game>> getAllEmployees () {
-        List<Game> employees = getMyGames();
-        return new ResponseEntity<>(employees, HttpStatus.OK);
-
-}
+//    @GetMapping("/all")
+//    public ResponseEntity<List<Game>> getAllEmployees () {
+//        List<Game> employees = getMyGames();
+//        return new ResponseEntity<>(employees, HttpStatus.OK);
+//
+//}
 
 }

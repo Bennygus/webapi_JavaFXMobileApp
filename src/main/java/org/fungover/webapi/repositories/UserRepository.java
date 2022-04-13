@@ -15,15 +15,15 @@ public interface UserRepository extends CrudRepository<User, Long> {
     @Query("select u.name from User u")
     List<String> getNameOnly();
 
-
-    @Query("select u.roles from User u")
-    List<String> getNameOnlyByRoles();
-
-
-    User findByEmail(String email);
-
-    @Query("select u.email from User u")
-    List<String> getEmailOnly();
+//
+//    @Query("select u.roles from User u")
+//    List<String> getNameOnlyByRoles();
+//
+//
+//    User findByEmail(String email);
+//
+//    @Query("select u.email from User u")
+//    List<String> getEmailOnly();
 
 
 }
